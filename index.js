@@ -22,34 +22,34 @@ const languages = {
 };
 
 // Matches "/echo [whatever]"
-bot.onText(/\/start/, (msg, match) => {
+bot.onText(/\/start/, (msg) => {
     bot.sendMessage(msg.chat.id, 'Какой язык вы желаете познать дорогой друг:', languages);
 });
 
 bot.on('callback_query', function (call) {
    let url = '';
 
-   if (call.data == 'C++') {
+   if (call.data === 'C++') {
        url = 'https://tproger.ru/books/cpp-books-beginners/'
    }
 
-   else if (call.data == 'C#'){
+   else if (call.data === 'C#'){
        url = "https://proglib.io/p/top-10-knig-po-c-ot-novichka-do-professionala-2020-03-18"
    }
 
-   else if (call.data == 'Python'){
+   else if (call.data === 'Python'){
        url = "https://proglib.io/p/python-best-books/"
    }
 
-   else if (call.data == 'Java'){
+   else if (call.data === 'Java'){
        url = "https://proglib.io/p/java-books-2019/"
    }
 
-   else if (call.data == 'Kotlin'){
+   else if (call.data === 'Kotlin'){
        url = "https://proglib.io/p/learning-kotlin/"
    }
 
-   else if (call.data == 'JavaScript'){
+   else if (call.data === 'JavaScript'){
       url = "https://techrocks.ru/2018/04/20/10-recommended-javascript-books/"
    }
 
